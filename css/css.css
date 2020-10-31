@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+:root {
+    --corFundoSite: #f4fafb;
+    --corPrimaria: #4285F4;
+    --cor2: #222222;
+    
+}
+
+body {
+    background-color: var(--corFundoSite) !important;
+    font-family: "Circular Std Book" !important;
+}
+
+html {
+    background-color: var(--cor1) !important;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.benford {
+    margin-top: 1px;
+    margin-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 33.333333%
+}
+
+.grafico {
+    margin: 10px;
+    border-radius: 30px;
+    width: 350px;
+    height: 320px;
+    padding: 20px;
+    background-color: white;
+}
+
+#primaryColor {
+    color: #4285F4;
+}
+
+.benford.hide-opacity {
+    opacity: 0;
+}
+
+.benford :hover {
+    -webkit-animation: fadeOut 1s;
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+    background-color: #f7f7f7;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 0.7;
+    }
+
+    99% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    justify-self: center;
+
+}
+
+li {
+    justify-self: center;
+    float: left;
+    margin-left: 30px;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0.7;
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.base {
+    padding-top: 100px;
+    display: float;
+    flex-direction: row;
+    background: linear-gradient(to right, rgb(0, 188, 212), rgb(38, 166, 154));
+    justify-content: center;
+    width: 100%;
+    height: 450px;
+}
+
+
+/* Header */
+.introducao {
+    margin-top: 80px;
+    margin-left: 50px;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+        align-items: center;
+        background-color: white;
+    width: 100%;
+    height: 80px;
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 6px 5px 10px 3px #02000010;
+}
+
+#navbar a {
+    color: #8498AE;
+    
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Circular Std Bold" !important;
+}
+
+#navbar a:hover {
+    color: #172B3E;
+}
+#navbar #title{
+    
+    font-family: "Circular Std Bold" !important;
+    font-size: 30px;
+    padding-bottom: -30px;
+}
+
+#navbar #subtitle{
+    
+    font-family: "Circular Std Bold" !important;
+    font-size: 10px;
+    padding-bottom: -30px;
+    padding-bottom: -30px;
+}
+.data{
+    display: flex;
+}
+.estatisticas{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    margin-left: 40px;
+    width: 370px;
+    height: 200px;
+    background-color: var(--corPrimaria);
+    border-radius: 15px;
+    border: 1px solid #dbe9f5;
+}
+.calculos{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    margin-left: 40px;
+    width: 570px;
+    height: 200px;
+    border: 1px solid #dbe9f5;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.estatisticas h6{
+    color: #f4fafba6;
+    font-family: "Circular Std Bold" !important;
+    
+}
+.calculos h6{
+    color: var(--corPrimaria);
+    font-family: "Circular Std Bold" !important;
+    
+}
+.estatisticas h2{
+    color: #f4fafbee;
+    font-family: "Circular Std Bold" !important;
+    
+}
+.estatisticas h1{
+    color: #f4fafbee;
+    font-family: "Circular Std Bold" !important;
+    
+}
+#navbar #logo{
+    font-family: "Circular Std Bold" !important;
+    margin-left: 30px;
+    color: #193148;
+    font-size: 25px;
+}
+#navbar #logo #analysis{
+    font-size: 20px;
+    font-family: "Circular Std Book" !important;
+}
+
+.calculos h5{
+    color: #8498AE;
+}
+.bom{
+    color: #09b500;
+}
+.medio{
+    color:#b5a300;
+}
+.ruim{
+    color: #b50000;
+}
