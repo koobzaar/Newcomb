@@ -11,11 +11,12 @@ Frank Benford demonstrou que esse resultado se aplica a uma ampla variedade de c
 
 #### Definição matemática
 Um conjunto de números satisfaz a lei de Benford se o primeiro dígito  d (d ∈ {1, ..., 9}) ocorre com a seguinte probabilidade:
+
 ![Equação da Lei de Benford](https://www.statisticshowto.com/wp-content/uploads/2016/07/benford-formula.png)
 ![Lei de Benford em gráfico](https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Benford_law_log_log_graph.svg/2000px-Benford_law_log_log_graph.svg.png)
 
-### Coeficiente de Similariedade
-Usamos nas nossas demonstrações um coeficiente criado por nós chamado Coeficiente de Similariedade, localizado no canto superior direito de cada país. Ele é calculado através da soma da diferença absoluta dos índices das nações obtidos pela aplicação da Lei de Benford com a probabilidade relativa descrita por Benford na equação base em seu respectivo dígito.
+### Coeficiente de Similaridade
+Usamos nas nossas demonstrações um coeficiente criado por nós chamado Coeficiente de Similaridade, localizado no canto superior direito de cada país. Ele é calculado através da soma da diferença absoluta dos índices das nações obtidos pela aplicação da Lei de Benford com a probabilidade relativa descrita por Benford na equação base em seu respectivo dígito.
 Quanto menor o número em questão, mais próximo efetivamente um país está da curva de Benford. Portanto, possivelmente havendo uma menor quantidade de notificações errôneas ou ocultação de mortes.
 
 ### Resultados Parciais
