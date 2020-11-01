@@ -4,7 +4,9 @@ COV-BNF é um site informativo que utiliza de dados públicos dos Ministérios d
 
 ### A Lei de Benford
 A lei de Benford, também chamada de lei do primeiro dígito, refere-se à distribuição de dígitos em várias fontes de casos reais. Ao contrário da homogeneidade esperada, a lei afirma que em muitas coleções de números que ocorrem naturalmente, o primeiro dígito significativo provavelmente será pequeno. Sem homogeneidade, esta distribuição mostra que o dígito 1 tem 30% de chance de aparecer em um conjunto de dados estatísticos enquanto valores maiores tem menos possibilidade de aparecer.
-
+<p align="center">
+  <img src="https://www.statisticshowto.com/wp-content/uploads/2016/07/benford-formula.png" width="150" align="center">
+ </p>
 Frank Benford demonstrou que esse resultado se aplica a uma ampla variedade de conjuntos de dados, incluindo contas de eletricidade, endereços, preços de ações, preços de casas, números de população, taxas de mortalidade, comprimentos de rios, constantes físicas e matemáticas. pelas leis de potência (que são muito comuns na natureza). Todas essas afirmações são calculadas ou definidas junto a uma escala logarítmica.
 
 
@@ -12,10 +14,13 @@ Frank Benford demonstrou que esse resultado se aplica a uma ampla variedade de c
 #### Definição matemática
 Um conjunto de números satisfaz a lei de Benford se o primeiro dígito  d (d ∈ {1, ..., 9}) ocorre com a seguinte probabilidade:
 
-![Equação da Lei de Benford](https://www.statisticshowto.com/wp-content/uploads/2016/07/benford-formula.png)
-![Lei de Benford em gráfico](https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Benford_law_log_log_graph.svg/2000px-Benford_law_log_log_graph.svg.png)
+<p align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Benford_law_log_log_graph.svg/2000px-Benford_law_log_log_graph.svg.png" width="400">
+ </p>
+
 
 ### Coeficiente de Similaridade
+
 Usamos nas nossas demonstrações um coeficiente criado por nós chamado Coeficiente de Similaridade, localizado no canto superior direito de cada país. Ele é calculado através da soma da diferença absoluta dos índices das nações obtidos pela aplicação da Lei de Benford com a probabilidade relativa descrita por Benford na equação base em seu respectivo dígito.
 Quanto menor o número em questão, mais próximo efetivamente um país está da curva de Benford. Portanto, possivelmente havendo uma menor quantidade de notificações errôneas ou ocultação de mortes.
 
