@@ -13,12 +13,12 @@
     --corFundoSite: #f4fafb;
     --corPrimaria: #4285F4;
     --cor2: #222222;
-    
+
 }
 
 body {
     background-color: var(--corFundoSite) !important;
-   
+
 }
 
 html {
@@ -70,8 +70,8 @@ li {
 #navbar {
     display: flex;
     flex-direction: row;
-        align-items: center;
-        background-color: white;
+    align-items: center;
+    background-color: white;
     width: 100%;
     height: 80px;
     -moz-box-shadow: 3px 3px 5px 6px #ccc;
@@ -81,7 +81,7 @@ li {
 
 #navbar a {
     color: #8498AE;
-    
+
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -92,29 +92,32 @@ li {
 #navbar a:hover {
     color: #172B3E;
 }
-#navbar #title{
-    
+
+#navbar #title {
+
     font-family: "Circular Std Bold" !important;
     font-size: 30px;
     padding-bottom: -30px;
 }
 
-#navbar #subtitle{
-    
+#navbar #subtitle {
+
     font-family: "Circular Std Bold" !important;
     font-size: 10px;
     padding-bottom: -30px;
     padding-bottom: -30px;
 }
-#navbar #logo{
+
+#navbar #logo {
     font-family: "Circular Std Bold" !important;
     margin-left: 30px;
     color: #193148;
     font-size: 25px;
 }
-#navbar #logo #analysis{
+
+#navbar #logo #analysis {
     font-size: 20px;
-   
+
 }
 
 
@@ -122,21 +125,23 @@ li {
 
 
 
-.card{
+.card {
     display: flex;
     flex-direction: row;
     margin-top: 100px;
     background-color: inherit;
     border: none;
 }
-.card .photo{
+
+.card .photo {
     margin-left: 50px;
     background-color: var(--corPrimaria);
     width: 350px;
     height: 200px;
     border-radius: 20px;
 }
-.card .intro{
+
+.card .intro {
     margin-left: 40px;
     margin-right: -300px;
     z-index: 1;
@@ -147,34 +152,39 @@ li {
     border-radius: 20px;
     padding: 10px;
 }
-.card .descricao{
+
+.card .descricao {
     margin-left: 40px;
     background-color: white;
     border: 1px solid #dbe9f5;
     width: 600px;
     height: 200px;
     border-radius: 20px;
-    
+
 }
-.card .intro h1{
+
+.card .intro h1 {
     font-size: 20px;
     color: var(--corPrimaria);
 
 }
-.card .intro h3{
-   
+
+.card .intro h3 {
+
     font-size: 10px;
     color: #6F7982;
 }
 
-.desc{
+.desc {
     font-family: "Circular Std Bold" !important;
     color: #232A2F;
-    
+
 }
-.descricao p{
+
+.descricao p {
     display: inline-block;
 }
+
 #compensador {
     background-color: red;
     display: inline-block;

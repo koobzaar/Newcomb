@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
 @import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 @font-face {
     font-family: 'Product Sans';
@@ -13,7 +13,116 @@
     --corFundoSite: #f4fafb;
     --corPrimaria: #4285F4;
     --cor2: #222222;
+
+}
+#divisor{
+    margin-top: -274px;
+}
+#logoArvore{
+    margin-left: 30px;
+    margin-right: -40px;
+    width: 65px;
+    height: 65px;
+}
+.ditado {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../images/fundo2.jpg");
     
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+#ditadoChines {
+    font-size: 120px;
+    color: #f4fafb;
+    transition: 2s;
+}
+
+#ditadoChinesTrad {
+    color: #f4fafb;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 20px;
+    transition: 2s;
+    text-shadow: 2px 2px 4px black;
+
+}
+
+
+.ditado:hover #ditadoChines {
+    -webkit-animation: ajustarDitado 1s;
+    font-size: 30px;
+}
+
+.ditado:hover #ditadoChinesTrad {
+    -webkit-animation: ajustarDitadoTrad 1s;
+    font-size: 0px;
+}
+
+@-webkit-keyframes ajustarDitado {
+    0% {
+        font-size: 120px;
+    }
+
+    100% {
+        font-size: 30px;
+    }
+}
+
+@-webkit-keyframes ajustarDitadoTrad {
+    0% {
+        font-size: 20px;
+    }
+
+    100% {
+        opacity: 0;
+        font-size: 0px;
+    }
+}
+
+.ditado .descricao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding-top: 100px;
+    font-family: 'Roboto', sans-serif !important;
+    text-shadow: 2px 2px 4px black;
+    height: 0%;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    z-index: 0;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    font-size: 20px;
+    animation: fadeinout2 4s linear forwards;
+    transition: 2s;
+
+}
+
+
+.ditado:hover .descricao {
+    -webkit-animation: descerDesc 1s;
+    height: 100%;
+    opacity: 1;
+}
+
+@-webkit-keyframes descerDesc {
+    0% {
+        height: 0%;
+        opacity: 0;
+    }
+
+    100% {
+        height: 100%;
+        opacity: 1;
+    }
 }
 
 body {
@@ -35,22 +144,26 @@ html {
     flex-wrap: wrap;
     flex-basis: 33.333333%
 }
-
+.centered{
+    width: 100px;
+    height: 50px;
+    position:fixed; 
+    top: calc(50% - 25px); 
+    left: calc(50% - 50px); 
+  }
 .grafico {
+    
     margin: 10px;
     border-radius: 30px;
     width: 350px;
     height: 320px;
     padding: 20px;
     background-color: white;
+    border: 1px solid #dbe9f5;
 }
 
 #primaryColor {
     color: #4285F4;
-}
-
-.benford.hide-opacity {
-    opacity: 0;
 }
 
 .benford :hover {
@@ -63,10 +176,6 @@ html {
 
 @-webkit-keyframes fadeOut {
     0% {
-        opacity: 0.7;
-    }
-
-    99% {
         opacity: 0.7;
     }
 
@@ -108,10 +217,10 @@ li {
     padding-top: 100px;
     display: float;
     flex-direction: row;
-    background: linear-gradient(to right, rgb(0, 188, 212), rgb(38, 166, 154));
+    background-color: white;
     justify-content: center;
     width: 100%;
-    height: 450px;
+    height: 300px;
 }
 
 
@@ -124,18 +233,19 @@ li {
 #navbar {
     display: flex;
     flex-direction: row;
-        align-items: center;
-        background-color: white;
+    align-items: center;
+    background-color: white;
     width: 100%;
     height: 80px;
     -moz-box-shadow: 3px 3px 5px 6px #ccc;
     -webkit-box-shadow: 3px 3px 5px 6px #ccc;
     box-shadow: 6px 5px 10px 3px #02000010;
+    z-index: 2;
 }
 
 #navbar a {
     color: #8498AE;
-    
+
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -146,24 +256,27 @@ li {
 #navbar a:hover {
     color: #172B3E;
 }
-#navbar #title{
-    
+
+#navbar #title {
+
     font-family: "Circular Std Bold" !important;
     font-size: 30px;
     padding-bottom: -30px;
 }
 
-#navbar #subtitle{
-    
+#navbar #subtitle {
+
     font-family: "Circular Std Bold" !important;
     font-size: 10px;
     padding-bottom: -30px;
     padding-bottom: -30px;
 }
-.data{
+
+.data {
     display: flex;
 }
-.estatisticas{
+
+.estatisticas {
     margin-top: 60px;
     display: flex;
     flex-direction: column;
@@ -176,7 +289,8 @@ li {
     border-radius: 15px;
     border: 1px solid #dbe9f5;
 }
-.calculos{
+
+.calculos {
     margin-top: 60px;
     display: flex;
     flex-direction: column;
@@ -190,46 +304,54 @@ li {
     border-radius: 15px;
 }
 
-.estatisticas h6{
+.estatisticas h6 {
     color: #f4fafba6;
     font-family: "Circular Std Bold" !important;
-    
+
 }
-.calculos h6{
+
+.calculos h6 {
     color: var(--corPrimaria);
     font-family: "Circular Std Bold" !important;
-    
+
 }
-.estatisticas h2{
+
+.estatisticas h2 {
     color: #f4fafbee;
     font-family: "Circular Std Bold" !important;
-    
+
 }
-.estatisticas h1{
+
+.estatisticas h1 {
     color: #f4fafbee;
     font-family: "Circular Std Bold" !important;
-    
+
 }
-#navbar #logo{
+
+#navbar #logo {
     font-family: "Circular Std Bold" !important;
     margin-left: 30px;
     color: #193148;
     font-size: 25px;
 }
-#navbar #logo #analysis{
+
+#navbar #logo #analysis {
     font-size: 20px;
     font-family: "Circular Std Book" !important;
 }
 
-.calculos h5{
+.calculos h5 {
     color: #8498AE;
 }
-.bom{
+
+.bom {
     color: #09b500;
 }
-.medio{
-    color:#b5a300;
+
+.medio {
+    color: #b5a300;
 }
-.ruim{
+
+.ruim {
     color: #b50000;
 }
