@@ -5,19 +5,22 @@
     <title>
 
     </title>
+    
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="css/css.css">
-    <script src="./script/brazilDataManager.js"></script>
+    
     <script src="./script/graphGenerator.js"></script>
-
+    <script src="./lib/classPais.js"></script>
+    
     <script src="./node_modules/chart.js/dist/Chart.js"></script>
     <script src="./node_modules/chart.js/dist/Chart.min.js"></script>
     <meta charset="UTF-8">
+    
 </head>
 
-<body>
+<body onload="analisar()">
     <div id="navbar">
         <a id="logo">BENFORD'S LAW | <span id='analysis'>Análise de dados estatísticos</span></a>
         <a class="active" href="#home">Visão Geral</a>
@@ -37,7 +40,7 @@
             <h6>Óbitos totais (no dia da coleta de dados)</h6>
             <h1><span class="Contador">1187014</span> </h1>
             <h6>Número de países analisados</h6>
-            <h2 id="paisesAnalisados"><span class="Contador">15</span></h2>
+            <h2 id="paisesAnalisados"><span class="ContadorPaises">15</span></h2>
 
         </div>
         <div class="calculos">
@@ -211,4 +214,9 @@
     <div class="base" id="home">
         <div class="texto">
             <script src="./script/mainScript.js"></script>
+            <script src="./data/countriesDatas.js"></script>
+            
+            <script src="./data/countriesMetadata.js"></script>
+            <script src="./script/dataAnalyser.js"></script>
+            
 </body>
