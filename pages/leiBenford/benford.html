@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>
+        BENFORD | A Lei
+    </title>
+    <link rel="icon" href="../../images/whitetree.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="../../js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="sobre.css">
+    
+    <link rel="stylesheet" href="./benford.css">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="navbar">
+        <a><img src="../../images/logologo.png" id="logoArvore"></a>
+        <a id="logo">BENFORD'S LAW | <span id='analysis'>Análise de dados estatísticos</span></a>
+        <a href="../../index.html">Visão Geral</a>
+        <a class="active" href="#news">Lei de Benford</a>
+        <a href="#contact">Fontes</a>
+        <a href="../sobre/sobre.html">Sobre</a>
+    </div>
+
+    <div class="ditado">
+        <div class="descricao">
+            <p style="opacity: 1;"> As primeiras observações a respeito deste fenômeno foram feitas pelo astrônomo Simon
+                Newcomb, por volta de 1881, ao notar que as primeiras páginas de livros de logaritmo, utilizados na
+                época para realizar cálculos logarítmicos, eram muito mais utilizadas do que as últimas páginas</p>
+        </div>
+        <h1 id="ditadoChines">BENFORD'S LAW</h1>
+
+    </div>
+    <div class="explanation">
+        <div class="content">
+            <h6 id="primaryColor"><b>Explicando a lei de Benford</b></h6>
+            <h3><b>Lei de Benford |</b> Conceito </h3>
+            <p>A lei de Benford, também chamada de lei do primeiro dígito,
+                refere-se à distribuição de dígitos em várias fontes de casos reais. Ao contrário da homogeneidade
+                esperada, a lei afirma que em muitas coleções de números que ocorrem naturalmente,o primeiro dígito
+                significativo provavelmente será pequeno. Sem homogeneidade, esta distribuição mostra que o dígito 1 tem
+                30% de chance de aparecer em um conjunto de dados estatísticos enquanto valores maiores tem menos
+                possibilidade de aparecer.
+                Frank Benford demonstrou que esse resultado se aplica a uma ampla variedade de conjuntos de dados,
+                incluindo contas de eletricidade, endereços, preços de ações, preços de casas, números de população,
+                taxas de mortalidade, comprimentos de rios, constantes físicas e matemáticas. Pelas leis de potência
+                (que são muito comuns na natureza). Todas essas afirmações são calculadas ou definidas junto a uma
+                escala logarítmica.
+            </p>
+            <div class="benford">
+            </div> 
+            <br>
+        </br>
+            <h6 id="right"><b>Benford pra quê?</b></h6>
+            <h3 id="right"><b> Lei de Benford </b>| Qual a utilidade dessa lei?</h3>
+            <p>Conjuntos númericos que são “gerados naturalmente” ou que sofrem
+                muitas transformações matemáticas como censo populacional, apuração de votações, valores de ações e
+                estatísticas de acesso a sites, são exemplos de datasets que se aproximam da Lei de Benford.
+                Seres humanos tentando burlar números, muitas vezes desconhecem a Lei de Benford e assumem que os
+                dígitos tem a mesma probabilidade de aparecer ou seguem algum outro padrão diferente do evidenciado por
+                Benford.
+                Já se usou até a Lei de Benford para identificar bots em perfis das redes sociais, vezes que uma foto
+                foi possivelmente alterada com edições, filtros ou até mesmo em casos criminais. Mas seu uso mais comum é
+                na identificação de fraudes principalmente em dataset contábeis. 
+            </p>
+            <br>
+        </br>
+        <h6><b>Documentários</b></h6>
+            <h3><b>Extra</b> | A Era dos Dados</h3>
+            <div class="netflixEmbed">
+
+                
+                <div id="photoDocumentario" onclick="window.open('https://www.netflix.com/watch/81084953')"></div>
+               
+                <div class="descricao">
+                    <h1 id="title">Connected <span>2020</span></h1>
+                    <h2 id="durationEps"> 46 MIN | EPISÓDIO 4 (DÍGITOS) </h2>
+                    <p id="description">Latif explora um padrão numérico que se aplica à música clássica, às redes sociais, ao combate à sonegação fiscal e talvez até ao universo como um todo.
+                        <a href="https://www.netflix.com/watch/81084953"><br>Clique para assistir </a>
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+        
+        <script src="../../node_modules/chart.js/dist/Chart.js"></script>
+    <script src="../.../node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="./benford.js"></script>
+</body>/

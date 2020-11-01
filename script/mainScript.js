@@ -105,7 +105,7 @@ function animate() {
         jQuery({
           Counter: 0
         }).animate({
-          Counter: analisePrincipal.paisesAnalisados.length
+          Counter: analisePrincipal.paisesAnalisados.length-1
         }, {
           duration: contadorConfig.duracao,
           easing: 'swing',

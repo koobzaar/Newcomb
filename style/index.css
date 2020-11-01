@@ -1,0 +1,277 @@
+
+
+#divisor{
+    margin-top: -274px;
+}
+
+.ditado {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../images/fundo2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+#ditadoChines {
+    font-size: 120px;
+    color: #f4fafb;
+    transition: 2s;
+}
+
+#ditadoChinesTrad {
+    color: #f4fafb;
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 20px;
+    transition: 2s;
+    text-shadow: 2px 2px 4px black;
+
+}
+
+
+.ditado:hover #ditadoChines {
+    -webkit-animation: ajustarDitado 1s;
+    font-size: 30px;
+}
+
+.ditado:hover #ditadoChinesTrad {
+    -webkit-animation: ajustarDitadoTrad 1s;
+    font-size: 0px;
+}
+
+@-webkit-keyframes ajustarDitado {
+    0% {
+        font-size: 120px;
+    }
+
+    100% {
+        font-size: 30px;
+    }
+}
+
+@-webkit-keyframes ajustarDitadoTrad {
+    0% {
+        font-size: 20px;
+    }
+
+    100% {
+        opacity: 0;
+        font-size: 0px;
+    }
+}
+
+.ditado .descricao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding-top: 100px;
+    font-family: 'Roboto', sans-serif !important;
+    text-shadow: 2px 2px 4px black;
+    height: 0%;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    z-index: 0;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    font-size: 20px;
+    animation: fadeinout2 4s linear forwards;
+    transition: 2s;
+
+}
+
+
+.ditado:hover .descricao {
+    -webkit-animation: descerDesc 1s;
+    height: 100%;
+    opacity: 1;
+}
+
+@-webkit-keyframes descerDesc {
+    0% {
+        height: 0%;
+        opacity: 0;
+    }
+
+    100% {
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+
+
+.benford {
+    margin-top: 1px;
+    margin-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 33.333333%
+}
+.centered{
+    width: 100px;
+    height: 50px;
+    position:fixed; 
+    top: calc(50% - 25px); 
+    left: calc(50% - 50px); 
+  }
+.grafico {
+    
+    margin: 10px;
+    border-radius: 30px;
+    width: 350px;
+    height: 320px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #dbe9f5;
+}
+
+#primaryColor {
+    color: var(--corPrimaria);
+}
+
+.benford :hover {
+    -webkit-animation: fadeOut 1s;
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+    background-color: #f7f7f7;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    justify-self: center;
+
+}
+
+li {
+    justify-self: center;
+    float: left;
+    margin-left: 30px;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0.7;
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.base {
+    padding-top: 100px;
+    display: float;
+    flex-direction: row;
+    background-color: white;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+}
+
+
+/* Header */
+.introducao {
+    margin-top: 80px;
+    margin-left: 50px;
+}
+
+
+
+
+
+.data {
+    display: flex;
+}
+
+.estatisticas {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    margin-left: 40px;
+    width: 370px;
+    height: 200px;
+    background-color: var(--corPrimaria);
+    border-radius: 15px;
+    border: 1px solid #dbe9f5;
+}
+
+.calculos {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    margin-left: 40px;
+    width: 570px;
+    height: 200px;
+    border: 1px solid #dbe9f5;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.estatisticas h6 {
+    color: #f4fafba6;
+    font-family: "Circular Std Bold" !important;
+
+}
+
+.calculos h6 {
+    color: var(--corPrimaria);
+    font-family: "Circular Std Bold" !important;
+
+}
+
+.estatisticas h2 {
+    color: #f4fafbee;
+    font-family: "Circular Std Bold" !important;
+
+}
+
+.estatisticas h1 {
+    color: #f4fafbee;
+    font-family: "Circular Std Bold" !important;
+
+}
+
+
+.calculos h5 {
+    color: #8498AE;
+}
+
+.bom {
+    color: #09b500;
+}
+
+.medio {
+    color: #b5a300;
+}
+
+.ruim {
+    color: #b50000;
+}

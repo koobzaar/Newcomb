@@ -21,6 +21,13 @@ var countryMetadata = [
         "id":3
     },
     {
+        "name":"Santos",
+        "alias":"MortesAcumuladas",
+        "dominantColor":"0,156,59",
+        "flagISO":"BR",
+        "id":23
+    },
+    {
         "name":"Canada",
         "alias":"deceased",
         "dominantColor":"197,16,21",
@@ -132,6 +139,7 @@ var countryMetadata = [
         "flagISO":"PT",
         "id":19
     },
+    
     {
         "name":"Singapura",
         "alias":"deceased",

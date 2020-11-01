@@ -1,7 +1,7 @@
 BenfordLaw = [30.1, 17.6, 12.5, 9.7, 7.9, 6.7, 5.8, 5.1, 4.6]
 class analisador {
     constructor() {
-        this.paisesParaAnalisar = [alemanha, belgica, brasil, canada, china, coreia, dinamarca, espanha, eua, filipinas, india, ira, italia, japao, malasia, nigeria, palestina, paquistao, portugal, singapura, suica, turquia]
+        this.paisesParaAnalisar = [alemanha, belgica, brasil,santos, canada, china, coreia, dinamarca, espanha, eua, filipinas, india, ira, italia, japao, malasia, nigeria, palestina, paquistao, portugal, singapura, suica, turquia]
         this.paisesAnalisados = [];
         this.diasAcumuladosAnalisados = 0;
         this.mortesTotais = 0;
