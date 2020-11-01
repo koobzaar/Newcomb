@@ -6,6 +6,7 @@ class analisador {
         this.diasAcumuladosAnalisados = 0;
         this.mortesTotais = 0;
         this.TotalPaisesAnalisados = 0;
+        this.tempoAlgoritmo = 0
     }
     _dePaises() {
         console.log("Analisando...")
@@ -16,6 +17,7 @@ class analisador {
             this.diasAcumuladosAnalisados += this.paisesAnalisados[indexadorPaises].numDiasAnalisados;
             this.mortesTotais += this.paisesAnalisados[indexadorPaises].numMortes;
             this.TotalPaisesAnalisados++;
+            this.tempoAlgoritmo+=this.paisesAnalisados[indexadorPaises].tempoAnalisando;
         }
     }
 }

@@ -1,5 +1,7 @@
 function analisar() {
+ 
   const analisePrincipal = new analisador()
+  
   analisePrincipal._dePaises();
   let contadorConfig = {
     "duracao": 4000
@@ -53,6 +55,20 @@ function animate() {
           easing: 'swing',
           step: function () {
             $this.text(Math.ceil(this.Counter).toLocaleString('pt') + ' dias de dados acumulativos');
+          }
+        });
+      });
+      $('.CountSeg').each(function () {
+        var $this = $(this);
+        jQuery({
+          Counter: 0
+        }).animate({
+          Counter: analisePrincipal.tempoAlgoritmo
+        }, {
+          duration: contadorConfig.duracao,
+          easing: 'swing',
+          step: function () {
+            $this.text('em '+(this.Counter/1000).toLocaleString('pt') + ' segundo(s)');
           }
         });
       });

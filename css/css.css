@@ -11,7 +11,7 @@
 
 :root {
     --corFundoSite: #f4fafb;
-    --corPrimaria: #4285F4;
+    --corPrimaria: #00ADA8;
     --cor2: #222222;
 
 }
@@ -163,7 +163,7 @@ html {
 }
 
 #primaryColor {
-    color: #4285F4;
+    color: var(--corPrimaria);
 }
 
 .benford :hover {
