@@ -19,9 +19,13 @@ Um conjunto de números satisfaz a lei de Benford se o primeiro dígito  d (d �
 Usamos nas nossas demonstrações um coeficiente criado por nós chamado Coeficiente de Similaridade, localizado no canto superior direito de cada país. Ele é calculado através da soma da diferença absoluta dos índices das nações obtidos pela aplicação da Lei de Benford com a probabilidade relativa descrita por Benford na equação base em seu respectivo dígito.
 Quanto menor o número em questão, mais próximo efetivamente um país está da curva de Benford. Portanto, possivelmente havendo uma menor quantidade de notificações errôneas ou ocultação de mortes.
 
-### Resultados Parciais
-![Resultado Parcial 1](https://image.prntscr.com/image/G_IAURHdQti-E34P8WXASQ.png)
-![Resultado Parcial 2](https://image.prntscr.com/image/YqT6lqqpQdqsIgcbwqrJ7w.png)
+### Website Preview com os Resultados Parciais da Pesquisa
+01/11/2020
+![Resultado Parcial 1](https://image.prntscr.com/image/_Ol0Qv5rRBWCu9XfB5SFEw.png)
+![Resultado Parcial 2](https://image.prntscr.com/image/q8tOFPHgS3OAfkg7hszajg.png)
+![Resultado Parcial 3](https://image.prntscr.com/image/a3ogqPEdTm_L41yCMRZ4Hw.png)
+![Resultado Parcial 4](https://image.prntscr.com/image/PNTu7MEzRFm_ZssoxnpycA.png)
+
 
 ## Contato
 Bruno Trigueiro | bruno.trigueiro@outlook.com
