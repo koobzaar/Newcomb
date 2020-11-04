@@ -9,12 +9,6 @@
     src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
 }
 
-:root {
-    --corFundoSite: #f4fafb;
-    --corPrimaria: #4285F4;
-    --cor2: #222222;
-
-}
 
 body {
     background-color: var(--corFundoSite) !important;
@@ -190,4 +184,25 @@ li {
     display: inline-block;
     width: 260px;
     height: 50%;
+}
+.explanation{
+    height: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.content{
+border-left: 2px solid var(--corPrimaria);
+border-right: 2px solid var(--corPrimaria);
+padding: 40px;
+padding-top: 100px;
+width: 60%;
+text-align: left;
+
+}
+.content h6{
+    color: var(--corPrimaria);
+}
+.explanation p {
+    text-align: justify !important;
 }
