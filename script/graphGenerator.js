@@ -17,7 +17,6 @@ i=0;
 function gerarGrafico(idDiv, benfordData, countryColor, nomePais, coeficiente) {i++
     if (nomePais == undefined)
         nomePais = ' ';
-    
     document.querySelector('.benford').insertAdjacentHTML(
         'afterbegin',
         `<div class='grafico' id="`+nomePais+`">

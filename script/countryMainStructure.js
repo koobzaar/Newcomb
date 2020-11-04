@@ -14,20 +14,16 @@ class dadosPais {
         this.tempoAnalisando = 0;
     }
     _analiseBenford() {
-        var inicioAnalise = new Date()
         let lastCovidData = 0,
             deltaCovid = 0,
-            totalNumbers = 0;
-
-        
+            totalNumbers = 0,
+            inicioAnalise = new Date();
         for (let i = 0; i < this.dadosSARSCOV.length - 1; i++) {
             lastCovidData = parseInt(this.dadosSARSCOV[i][this.aliasMortes], 10);
             this.numDiasAnalisados++;
             deltaCovid = parseInt(this.dadosSARSCOV[i + 1][this.aliasMortes], 10) - lastCovidData; 
             // Transforma em decimal os dados de morte de determinado dia e subtrai pelo dia anterior para ter o Δ relativo 
             // daquele intervalo de tempo
-            if(this.nomePais=='Santos')
-            console.log(deltaCovid)
             if (deltaCovid != 0 && !isNaN(deltaCovid)) {
                 //Posteriormente valida se os dados são diferentes de zero. Considerando que na lei de Benford não é utilizado 0 para medição, 
                 //um dia que não tenha havido mortes não é útil para a relação de comparação de dados.
@@ -35,15 +31,10 @@ class dadosPais {
                 this.benfordData[String(deltaCovid).charAt(0) - 1] += 1;
                 totalNumbers++;
             }
-            
         }
         // Guardamos no vetor BenfordData o resultado da nossa análise dos dados de morte e seus respectivos dígitos. Abaixo ele mescla tudo no vetor.
-        for (let index = 0; index < this.benfordData.length; index++){ 
+        for (let index = 0; index < this.benfordData.length; index++)
             this.benfordData[index] = this.benfordData[index] / totalNumbers * 100;
-
-        }
-        if(this.nomePais=='Santos')
-        console.log(this.benfordData)
         this._dadosForamGerados[0] = true;
         this.tempoAnalisando = Math.abs(new Date() - inicioAnalise)
         return this.benfordData;

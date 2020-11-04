@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <title>
         BENFORD | Research
     </title>
-    <link rel="icon" href="./images/whitetree.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="./style/index.css">
+    <script src="lib/bootstrap/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="lib/jquery/jquery-3.5.1.min.js"></script>
     <script src="./script/graphGenerator.js"></script>
-    <script src="./lib/classPais.js"></script>
-
     <script src="./node_modules/chart.js/dist/Chart.js"></script>
     <script src="./node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="./script/dataAnalyser.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="icon" href="./images/whitetree.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <meta charset="UTF-8">
-
 </head>
-
 <body onload="analisar()">
     <div id="navbar">
         <a><img src="./images/logologo.png" id="logoArvore"></a>
-        <a id="logo">BENFORD'S LAW | <span id='analysis'>Análise estatísticas de dados</span></a>
+        <a id="logo">BENFORD'S LAW | <span id='analysis'>Análise estatística de dados</span></a>
         <a class="active" href="#home">Visão Geral</a>
         <a href="./pages/leiBenford/benford.html">Lei de Benford</a>
         <a href="#contact">Fontes</a>
         <a href="./pages/sobre/sobre.html">Sobre</a>
-
     </div>
     <div class="ditado">
         <div class="descricao">
@@ -58,144 +53,7 @@
         <div class="calculos">
             <h6>Um conjunto de números satisfaz a lei de Benford se o primeiro dígito ocorre com a seguinte
                 probabilidade:</h6>
-
-            <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="65.95ex" height="6.176ex"
-                style="vertical-align: -2.505ex;" viewBox="0 -1580.7 28395.2 2659.1" role="img" focusable="false"
-                xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
-                <title id="MathJax-SVG-1-Title">{\displaystyle P(d)=\log _{10}(d+1)-\log _{10}(d)=\log _{10}\left({\frac
-                    {d+1}{d}}\right)=\log _{10}\left(1+{\frac {1}{d}}\right).}</title>
-                <defs aria-hidden="true">
-                    <path stroke-width="1" id="E1-MJMATHI-50"
-                        d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z">
-                    </path>
-                    <path stroke-width="1" id="E1-MJMAIN-28"
-                        d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z">
-                    </path>
-                    <path stroke-width="1" id="E1-MJMATHI-64"
-                        d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z">
-                    </path>
-                    <path stroke-width="1" id="E1-MJMAIN-29"
-                        d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z">
-                    </path>
-                    <path stroke-width="1" id="E1-MJMAIN-3D"
-                        d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z">
-                    </path>
-                    <path stroke-width="1" id="E1-MJMAIN-6C"
-                        d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z">
-                    </path>
-                    <path stroke-width="1" id="E1-MJMAIN-6F"
-                        d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z">
-                    </path>
-                    <path stroke-width="1" id="E1-MJMAIN-67"
-                        d="M329 409Q373 453 429 453Q459 453 472 434T485 396Q485 382 476 371T449 360Q416 360 412 390Q410 404 415 411Q415 412 416 414V415Q388 412 363 393Q355 388 355 386Q355 385 359 381T368 369T379 351T388 325T392 292Q392 230 343 187T222 143Q172 143 123 171Q112 153 112 133Q112 98 138 81Q147 75 155 75T227 73Q311 72 335 67Q396 58 431 26Q470 -13 470 -72Q470 -139 392 -175Q332 -206 250 -206Q167 -206 107 -175Q29 -140 29 -75Q29 -39 50 -15T92 18L103 24Q67 55 67 108Q67 155 96 193Q52 237 52 292Q52 355 102 398T223 442Q274 442 318 416L329 409ZM299 343Q294 371 273 387T221 404Q192 404 171 388T145 343Q142 326 142 292Q142 248 149 227T179 192Q196 182 222 182Q244 182 260 189T283 207T294 227T299 242Q302 258 302 292T299 343ZM403 -75Q403 -50 389 -34T348 -11T299 -2T245 0H218Q151 0 138 -6Q118 -15 107 -34T95 -74Q95 -84 101 -97T122 -127T170 -155T250 -167Q319 -167 361 -139T403 -75Z">
-                    </path>
-                    <path stroke-width="1" id="E1-MJMAIN-31"
-                        d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z">
-                    </path>
-                    <path stroke-width="1" id="E1-MJMAIN-30"
-                        d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z">
-                    </path>
-                    <path stroke-width="1" id="E1-MJMAIN-2B"
-                        d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z">
-                    </path>
-                    <path stroke-width="1" id="E1-MJMAIN-2212"
-                        d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path>
-                    <path stroke-width="1" id="E1-MJSZ3-28"
-                        d="M701 -940Q701 -943 695 -949H664Q662 -947 636 -922T591 -879T537 -818T475 -737T412 -636T350 -511T295 -362T250 -186T221 17T209 251Q209 962 573 1361Q596 1386 616 1405T649 1437T664 1450H695Q701 1444 701 1441Q701 1436 681 1415T629 1356T557 1261T476 1118T400 927T340 675T308 359Q306 321 306 250Q306 -139 400 -430T690 -924Q701 -936 701 -940Z">
-                    </path>
-                    <path stroke-width="1" id="E1-MJSZ3-29"
-                        d="M34 1438Q34 1446 37 1448T50 1450H56H71Q73 1448 99 1423T144 1380T198 1319T260 1238T323 1137T385 1013T440 864T485 688T514 485T526 251Q526 134 519 53Q472 -519 162 -860Q139 -885 119 -904T86 -936T71 -949H56Q43 -949 39 -947T34 -937Q88 -883 140 -813Q428 -430 428 251Q428 453 402 628T338 922T245 1146T145 1309T46 1425Q44 1427 42 1429T39 1433T36 1436L34 1438Z">
-                    </path>
-                    <path stroke-width="1" id="E1-MJMAIN-2E"
-                        d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path>
-                </defs>
-                <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"
-                    aria-hidden="true">
-                    <use xlink:href="#E1-MJMATHI-50" x="0" y="0"></use>
-                    <use xlink:href="#E1-MJMAIN-28" x="751" y="0"></use>
-                    <use xlink:href="#E1-MJMATHI-64" x="1141" y="0"></use>
-                    <use xlink:href="#E1-MJMAIN-29" x="1664" y="0"></use>
-                    <use xlink:href="#E1-MJMAIN-3D" x="2331" y="0"></use>
-                    <g transform="translate(3388,0)">
-                        <use xlink:href="#E1-MJMAIN-6C"></use>
-                        <use xlink:href="#E1-MJMAIN-6F" x="278" y="0"></use>
-                        <use xlink:href="#E1-MJMAIN-67" x="779" y="0"></use>
-                        <g transform="translate(1279,-243)">
-                            <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-31"></use>
-                            <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-30" x="500" y="0"></use>
-                        </g>
-                    </g>
-                    <use xlink:href="#E1-MJMAIN-28" x="5475" y="0"></use>
-                    <use xlink:href="#E1-MJMATHI-64" x="5864" y="0"></use>
-                    <use xlink:href="#E1-MJMAIN-2B" x="6610" y="0"></use>
-                    <use xlink:href="#E1-MJMAIN-31" x="7611" y="0"></use>
-                    <use xlink:href="#E1-MJMAIN-29" x="8111" y="0"></use>
-                    <use xlink:href="#E1-MJMAIN-2212" x="8723" y="0"></use>
-                    <g transform="translate(9724,0)">
-                        <use xlink:href="#E1-MJMAIN-6C"></use>
-                        <use xlink:href="#E1-MJMAIN-6F" x="278" y="0"></use>
-                        <use xlink:href="#E1-MJMAIN-67" x="779" y="0"></use>
-                        <g transform="translate(1279,-243)">
-                            <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-31"></use>
-                            <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-30" x="500" y="0"></use>
-                        </g>
-                    </g>
-                    <use xlink:href="#E1-MJMAIN-28" x="11811" y="0"></use>
-                    <use xlink:href="#E1-MJMATHI-64" x="12201" y="0"></use>
-                    <use xlink:href="#E1-MJMAIN-29" x="12724" y="0"></use>
-                    <use xlink:href="#E1-MJMAIN-3D" x="13391" y="0"></use>
-                    <g transform="translate(14448,0)">
-                        <use xlink:href="#E1-MJMAIN-6C"></use>
-                        <use xlink:href="#E1-MJMAIN-6F" x="278" y="0"></use>
-                        <use xlink:href="#E1-MJMAIN-67" x="779" y="0"></use>
-                        <g transform="translate(1279,-243)">
-                            <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-31"></use>
-                            <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-30" x="500" y="0"></use>
-                        </g>
-                    </g>
-                    <g transform="translate(16535,0)">
-                        <use xlink:href="#E1-MJSZ3-28"></use>
-                        <g transform="translate(736,0)">
-                            <g transform="translate(120,0)">
-                                <rect stroke="none" width="2366" height="60" x="0" y="220"></rect>
-                                <g transform="translate(60,676)">
-                                    <use xlink:href="#E1-MJMATHI-64" x="0" y="0"></use>
-                                    <use xlink:href="#E1-MJMAIN-2B" x="745" y="0"></use>
-                                    <use xlink:href="#E1-MJMAIN-31" x="1746" y="0"></use>
-                                </g>
-                                <use xlink:href="#E1-MJMATHI-64" x="921" y="-715"></use>
-                            </g>
-                        </g>
-                        <use xlink:href="#E1-MJSZ3-29" x="3343" y="-1"></use>
-                    </g>
-                    <use xlink:href="#E1-MJMAIN-3D" x="20893" y="0"></use>
-                    <g transform="translate(21949,0)">
-                        <use xlink:href="#E1-MJMAIN-6C"></use>
-                        <use xlink:href="#E1-MJMAIN-6F" x="278" y="0"></use>
-                        <use xlink:href="#E1-MJMAIN-67" x="779" y="0"></use>
-                        <g transform="translate(1279,-243)">
-                            <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-31"></use>
-                            <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-30" x="500" y="0"></use>
-                        </g>
-                    </g>
-                    <g transform="translate(24036,0)">
-                        <use xlink:href="#E1-MJSZ3-28"></use>
-                        <g transform="translate(736,0)">
-                            <use xlink:href="#E1-MJMAIN-31" x="0" y="0"></use>
-                            <use xlink:href="#E1-MJMAIN-2B" x="722" y="0"></use>
-                            <g transform="translate(1723,0)">
-                                <g transform="translate(120,0)">
-                                    <rect stroke="none" width="643" height="60" x="0" y="220"></rect>
-                                    <use xlink:href="#E1-MJMAIN-31" x="71" y="676"></use>
-                                    <use xlink:href="#E1-MJMATHI-64" x="60" y="-715"></use>
-                                </g>
-                            </g>
-                        </g>
-                        <use xlink:href="#E1-MJSZ3-29" x="3343" y="-1"></use>
-                    </g>
-                    <use xlink:href="#E1-MJMAIN-2E" x="28116" y="0"></use>
-                </g>
-            </svg>
+                <div id="benfordProportion"></div>
             <h6><br>OBS: (d ∈ {1, ..., 9}) </h6>
         </div>
         <div class="calculos">
@@ -232,108 +90,143 @@
     <div class="benford">
     </div>
     <div class="analise">
-    <div class="explanation">
-        <h6 id="primaryColor">Análise dos Resultados</h6>
-        <h3><b>Introdução |</b> O que a Lei de Benford nos demonstra?</h3>
-        <p>Números não são aleatórios, por mais que pareçam ser. Em computação já sabemos isso há algum tempo com o
-            processo pseudo-aleatorio de gerar números. Entretanto, quando aplicamos isso para conceitos naturais, soa
-            praticamente impossível que haja um padrão. Como exatamente números de morte de pessoas podem seguir um
-            padrão? Números de pessoas em todas as cidades de um determinado estado? A Lei de Benford é excepcional por
-            conta disso. Com a visualização através desses gráficos, ficou notávevl que grandes países normalmente não
-            tem um controle exemplar do número de mortes de sua população. O que é de se esperar que aconteça,
-            infelizmente. </p>
-    </div>
-    <div class="explanation">
-        <h6 id="primaryColor">Relação PIB e Pandemia</h6>
-        <h3><b>Produto Interno Bruto |</b> Países mais ricos tem um controle melhor de seus números na pandemia?</h3>
-        <p>Sempre imaginamos que super potências, como a Suiça, por exemplo, pudesse ter um
-            controle melhor desses índices. E países
-            que tem uma menor população conseguem fazer um controle melhor de seu território e de sua pandemia, certo?
-            Não é o que é mostrado através da curva de Benford. E
-            principalmente aqueles que adotaram medidas de isolamento rígidas, como é o caso da Nigéria. Como um país
-            localizado no continente mais pobre do globo conseguiu um controle tão exepcional de sua pandemia? De acordo
-            com o website UOL, a <a
-                href="https://noticias.uol.com.br/ultimas-noticias/deutschewelle/2020/07/30/qual-a-real-extensao-da-pandemia-na-africa.htm">Nigéria
-                foi o país que mais se destacou no continente Africano.</a> Mas um grande PIB garante um controle melhor
-            da pandemia? A resposta é não. Países como a África do Sul, por exemplo, que tem o segundo maior PIB do
-            continente, tem, como dito no mesmo artigo da Nigéria, a COVID-19 fora de controle. Saíndo da África e indo
-            para as Américas, países como os Estados Unidos e Brasil demonstram a mesma coisa. Isso é uma prova viva de
-            que grande economias não necessariamente se sairão melhor em controles pandêmicos. Uma exceção a essa regra,
-            no entanto, está a Alemanha. Que se manteve firme em relação ao nosso Coeficiente de Similaridade e a curva
-            de Benford. A Alemanha exibe com orgulho a qualidade de seu sistema de saúde, que <a
-                href="https://youtu.be/TC8wxecpcfk">agiu prontamente em relação a pandemia</a>
-        </p>
-    </div>
-    <div class="explanation">
-        <h6 id="primaryColor">Baixada Santista</h6>
-        <h3><b>Cidade de Santos |</b> O que Benford pode dizer a respeito dos números de Santos?</h3>
-        <p>Santos possui, de acordo com uma matéria do G1 no dia 02/07/2020, <a
-                href="https://g1.globo.com/sp/santos-regiao/mais-saude/noticia/2020/07/02/indice-de-mortalidade-por-covid-19-em-santos-e-cubatao-e-tres-vezes-maior-que-o-nacional.ghtml">um
-                índice de mortalidade por Covid-19 2.99x (3x) maior que o do Brasil como um todo</a>.
-            No entanto, conforme nossos índices de Benford para Santos demonstram, esses dados de mortes podem estar
-            errados de <b>duas maneiras</b>.
-            Na primeira maneira, se considerarmos que Santos, desde o começo da pandemia de Sars-CoV-2, diariamente
-            tinha números que 10 mortes diárias por Covid-19, podemos assumir, no entanto, que está havendo dados de
-            mortes que estão acima do esperado.
-            O que acontece é que, de acordo com o gráfico da Lei de Benford, as análises dessas mortes diárias
-            demonstraram que, em dias que foram dadas um total de quatro mortes por Covid-19, na realidade teria
-            acontecido apenas uma. O mesmo é notado na curva do digito três. Todos os outros digitos estão em perfeito
-            conforme com a lei de Benford.
-            Outra teoria, no entanto, é de que houve dias em que foram notificados 4 mortes, quando na realidade
-            poderiam haver <b>de dez a dezenove mortes por Covid-19 na cidade.</b> Portanto o índice de letalidade pode
-            ser muito maior.
-            A mais aceita de acordo com nossas pesquisas é a primeira hipotese. Isso porque, como dito anteriormente, as
-            notificações de mortes normalmente não passam de 10. E caso esses números fossem maior, o índice de
-            letalidade médio da Covid-19 não bateria com o número total de mortes. Tal qual é evidenciado pelo gráfico
-            de Benford da Singapura.
+        <div class="explanation">
+            <h6 id="primaryColor">Análise dos Resultados</h6>
+            <h3><b>Introdução |</b> O que a Lei de Benford nos demonstra?</h3>
+            <p>Números não são aleatórios, por mais que pareçam ser. Em computação já sabemos isso há algum tempo com o
+                processo pseudo-aleatorio de gerar números. Entretanto, quando aplicamos isso para conceitos naturais,
+                soa
+                praticamente impossível que haja um padrão. Como exatamente números de morte de pessoas podem seguir um
+                padrão? Números de pessoas em todas as cidades de um determinado estado? A Lei de Benford é excepcional
+                por
+                conta disso. Com a visualização através desses gráficos, ficou notávevl que grandes países normalmente
+                não
+                tem um controle exemplar do número de mortes de sua população. O que é de se esperar que aconteça,
+                infelizmente. </p>
+        </div>
+        <div class="explanation">
+            <h6 id="primaryColor">Relação PIB e Pandemia</h6>
+            <h3><b>Produto Interno Bruto |</b> Países mais ricos tem um controle melhor de seus números na pandemia?
+            </h3>
+            <p>Sempre imaginamos que super potências, como a Suiça, por exemplo, pudesse ter um
+                controle melhor desses índices. E países
+                que tem uma menor população conseguem fazer um controle melhor de seu território e de sua pandemia,
+                certo?
+                Não é o que é mostrado através da curva de Benford. E
+                principalmente aqueles que adotaram medidas de isolamento rígidas, como é o caso da Nigéria. Como um
+                país
+                localizado no continente mais pobre do globo conseguiu um controle tão exepcional de sua pandemia? De
+                acordo
+                com o website UOL, a <a
+                    href="https://noticias.uol.com.br/ultimas-noticias/deutschewelle/2020/07/30/qual-a-real-extensao-da-pandemia-na-africa.htm">Nigéria
+                    foi o país que mais se destacou no continente Africano.</a> Mas um grande PIB garante um controle
+                melhor
+                da pandemia? A resposta é não. Países como a África do Sul, por exemplo, que tem o segundo maior PIB do
+                continente, tem, como dito no mesmo artigo da Nigéria, a COVID-19 fora de controle. Saíndo da África e
+                indo
+                para as Américas, países como os Estados Unidos e Brasil demonstram a mesma coisa. Isso é uma prova viva
+                de
+                que grande economias não necessariamente se sairão melhor em controles pandêmicos. Uma exceção a essa
+                regra,
+                no entanto, está a Alemanha. Que se manteve firme em relação ao nosso Coeficiente de Similaridade e a
+                curva
+                de Benford. A Alemanha exibe com orgulho a qualidade de seu sistema de saúde, que <a
+                    href="https://youtu.be/TC8wxecpcfk">agiu prontamente em relação a pandemia</a>
+            </p>
+        </div>
+        <div class="explanation">
+            <h6 id="primaryColor">Baixada Santista</h6>
+            <h3><b>Cidade de Santos |</b> O que Benford pode dizer a respeito dos números de Santos?</h3>
+            <p>Santos possui, de acordo com uma matéria do G1 no dia 02/07/2020, <a
+                    href="https://g1.globo.com/sp/santos-regiao/mais-saude/noticia/2020/07/02/indice-de-mortalidade-por-covid-19-em-santos-e-cubatao-e-tres-vezes-maior-que-o-nacional.ghtml">um
+                    índice de mortalidade por Covid-19 2.99x (3x) maior que o do Brasil como um todo</a>.
+                No entanto, conforme nossos índices de Benford para Santos demonstram, esses dados de mortes podem estar
+                errados de <b>duas maneiras</b>.
+                Na primeira maneira, se considerarmos que Santos, desde o começo da pandemia de Sars-CoV-2, diariamente
+                tinha números que 10 mortes diárias por Covid-19, podemos assumir, no entanto, que está havendo dados de
+                mortes que estão acima do esperado.
+                O que acontece é que, de acordo com o gráfico da Lei de Benford, as análises dessas mortes diárias
+                demonstraram que, em dias que foram dadas um total de quatro mortes por Covid-19, na realidade teria
+                acontecido apenas uma. O mesmo é notado na curva do digito três. Todos os outros digitos estão em
+                perfeito
+                conforme com a lei de Benford.
+                Outra teoria, no entanto, é de que houve dias em que foram notificados 4 mortes, quando na realidade
+                poderiam haver <b>de dez a dezenove mortes por Covid-19 na cidade.</b> Portanto o índice de letalidade
+                pode
+                ser muito maior.
+                A mais aceita de acordo com nossas pesquisas é a primeira hipotese. Isso porque, como dito
+                anteriormente, as
+                notificações de mortes normalmente não passam de 10. E caso esses números fossem maior, o índice de
+                letalidade médio da Covid-19 não bateria com o número total de mortes. Tal qual é evidenciado pelo
+                gráfico
+                de Benford da Singapura.
 
-        </p>
+            </p>
+        </div>
+        <div class="explanation">
+            <h6 id="primaryColor">Super subnotificação</h6>
+            <h3><b>Singapura |</b> O que a Singapura, um país que era "exemplo de combate", pode nos dizer com seus
+                dados de
+                mortes de Covid?</h3>
+            <p>A curva da Singapura é a mais acentuada se comparada as de outros países nos nosso gráficos. Isso
+                acontece
+                porque o país não anda registrando as mortes como devia. Hoje, <a
+                    href="https://news.google.com/covid19/map?hl=pt-BR&mid=%2Fm%2F06t2t&gl=BR&ceid=BR%3Apt-419">de
+                    acordo
+                    com os dados públicos da Singapura</a>, morreram 28 pessoas vitimas da Sars-CoV-2.
+                Antes denominada como um <a
+                    href="https://noticias.uol.com.br/ultimas-noticias/bbc/2020/04/12/a-volta-do-coronavirus-a-cingapura-pais-que-era-exemplo-no-combate-a-doenca.htm">
+                    exemplo de combate a pandemia</a>, nada mais faz que forjar seus dados de morte.
+                O Sars-CoV-2 tem, normalmente, uma <a
+                    href="https://www.uol.com.br/vivabem/noticias/redacao/2020/10/05/o-enigma-da-letalidade.htm">letalidade
+                    de 0.5% a 1%</a>. Como a taxa tem essa variação, utilizaremos a média de 0.75% de letalidade. Se
+                aplicarmos aos 58 mil casos de Covid-19 da Singapura, <b>teremos um total esperado de 435 mortes por
+                    Covid-19 no país que notificou, no total, 28 mortes.</b> A taxa de letalidade da Covid-19 na
+                Singapura,
+                de acordo com o governo deles, é de (aplicando aos dados de casos e mortes), <b>0.05%</b>.
+                Mesmo que a Singapura tivesse adotado um sistema de combate dos sonhos à pandemia de Covid-19 no mundo,
+                seus
+                dados teriam seguido a Lei de Benford. O que não é o caso.
+                Países que mentem perante a pandemia tem sua glória momentânea pelo combate eficaz, no entanto, sempre
+                são
+                descobertos. Que é o caso da China, por exemplo. No entanto, é de praxe que não há maneiras de confiar
+                nos
+                dados relatados pelo país, já que a política deles de dados nacionais condena a prática de
+                compartilharmento
+                de informações. Ainda mais perante a 'Guerra Fria' estadunidense com a potência chinesa. Onde, tendo em
+                vista que o país norte americano está com a maior quantidade de contaminação pro Covid-19 no mundo, a
+                China
+                quer aparecer como refência em inovação e combate em uma posição privilegiada que os Estados Unidos, do
+                modo
+                que estão, nunca vão ter.
+            </p>
+        </div>
+        <div class="explanation">
+            <h6 id="primaryColor">Conclusão</h6>
+            <h3><b>Enfim... |</b> O que podemos tirar de bom com tudo isso?</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ipsa pariatur perferendis voluptates quo
+                fugiat vitae id enim iusto in repellendus, harum sed iste ullam! Ullam esse expedita deserunt omnis
+                culpa atque porro vitae, maxime nam ducimus maiores quod aperiam tenetur obcaecati minus facilis. Dolor
+                aut non quidem, libero in autem quae eos repudiandae consequuntur, corrupti doloribus esse beatae
+                assumenda animi expedita! Repudiandae dolorum qui laudantium aliquid ea tenetur quaerat perferendis hic
+                quam quisquam, porro animi corrupti repellendus reiciendis iste quia dignissimos tempore praesentium
+                architecto eos ducimus et. Vitae quod quia consectetur blanditiis facilis, corporis optio, sapiente,
+                assumenda enim ea dolorum illum quasi iusto quidem cupiditate. Magnam quam optio explicabo numquam
+                corrupti dignissimos sequi obcaecati ab. Fugit quibusdam maxime sit exercitationem incidunt recusandae
+                atque a tempora architecto? Provident molestias perspiciatis repudiandae dolores consectetur sunt
+                quidem. Voluptate id ipsa esse veniam soluta molestias. Dolor, fuga beatae obcaecati aperiam, dolorem
+                sit ullam aut itaque ad alias reiciendis neque veniam et excepturi doloribus laudantium. Minima
+                temporibus veritatis minus itaque quas numquam ad, neque sequi magni aperiam praesentium ea aut illum
+                totam voluptas quam quis voluptate dignissimos enim provident beatae nemo. Voluptatem, fugiat modi,
+                eligendi eveniet perspiciatis ad vitae itaque consectetur, enim suscipit perferendis.
+            </p>
+        </div>
     </div>
-    <div class="explanation">
-        <h6 id="primaryColor">Super subnotificação</h6>
-        <h3><b>Singapura |</b> O que a Singapura, um país que era "exemplo de combate", pode nos dizer com seus dados de
-            mortes de Covid?</h3>
-        <p>A curva da Singapura é a mais acentuada se comparada as de outros países nos nosso gráficos. Isso acontece
-            porque o país não anda registrando as mortes como devia. Hoje, <a
-                href="https://news.google.com/covid19/map?hl=pt-BR&mid=%2Fm%2F06t2t&gl=BR&ceid=BR%3Apt-419">de acordo
-                com os dados públicos da Singapura</a>, morreram 28 pessoas vitimas da Sars-CoV-2.
-            Antes denominada como um <a
-                href="https://noticias.uol.com.br/ultimas-noticias/bbc/2020/04/12/a-volta-do-coronavirus-a-cingapura-pais-que-era-exemplo-no-combate-a-doenca.htm">
-                exemplo de combate a pandemia</a>, nada mais faz que forjar seus dados de morte.
-            O Sars-CoV-2 tem, normalmente, uma <a
-                href="https://www.uol.com.br/vivabem/noticias/redacao/2020/10/05/o-enigma-da-letalidade.htm">letalidade
-                de 0.5% a 1%</a>. Como a taxa tem essa variação, utilizaremos a média de 0.75% de letalidade. Se
-            aplicarmos aos 58 mil casos de Covid-19 da Singapura, <b>teremos um total esperado de 435 mortes por
-                Covid-19 no país que notificou, no total, 28 mortes.</b> A taxa de letalidade da Covid-19 na Singapura,
-            de acordo com o governo deles, é de (aplicando aos dados de casos e mortes), <b>0.05%</b>.
-            Mesmo que a Singapura tivesse adotado um sistema de combate dos sonhos à pandemia de Covid-19 no mundo, seus
-            dados teriam seguido a Lei de Benford. O que não é o caso.
-            Países que mentem perante a pandemia tem sua glória momentânea pelo combate eficaz, no entanto, sempre são
-            descobertos. Que é o caso da China, por exemplo. No entanto, é de praxe que não há maneiras de confiar nos
-            dados relatados pelo país, já que a política deles de dados nacionais condena a prática de compartilharmento
-            de informações. Ainda mais perante a 'Guerra Fria' estadunidense com a potência chinesa. Onde, tendo em
-            vista que o país norte americano está com a maior quantidade de contaminação pro Covid-19 no mundo, a China
-            quer aparecer como refência em inovação e combate em uma posição privilegiada que os Estados Unidos, do modo
-            que estão, nunca vão ter.
-        </p>
-    </div>
-    <div class="explanation">
-        <h6 id="primaryColor">Conclusão</h6>
-        <h3><b>Enfim... |</b> O que podemos tirar de bom com tudo isso?</h3>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ipsa pariatur perferendis voluptates quo fugiat vitae id enim iusto in repellendus, harum sed iste ullam! Ullam esse expedita deserunt omnis culpa atque porro vitae, maxime nam ducimus maiores quod aperiam tenetur obcaecati minus facilis. Dolor aut non quidem, libero in autem quae eos repudiandae consequuntur, corrupti doloribus esse beatae assumenda animi expedita! Repudiandae dolorum qui laudantium aliquid ea tenetur quaerat perferendis hic quam quisquam, porro animi corrupti repellendus reiciendis iste quia dignissimos tempore praesentium architecto eos ducimus et. Vitae quod quia consectetur blanditiis facilis, corporis optio, sapiente, assumenda enim ea dolorum illum quasi iusto quidem cupiditate. Magnam quam optio explicabo numquam corrupti dignissimos sequi obcaecati ab. Fugit quibusdam maxime sit exercitationem incidunt recusandae atque a tempora architecto? Provident molestias perspiciatis repudiandae dolores consectetur sunt quidem. Voluptate id ipsa esse veniam soluta molestias. Dolor, fuga beatae obcaecati aperiam, dolorem sit ullam aut itaque ad alias reiciendis neque veniam et excepturi doloribus laudantium. Minima temporibus veritatis minus itaque quas numquam ad, neque sequi magni aperiam praesentium ea aut illum totam voluptas quam quis voluptate dignissimos enim provident beatae nemo. Voluptatem, fugiat modi, eligendi eveniet perspiciatis ad vitae itaque consectetur, enim suscipit perferendis.
-        </p>
-    </div>
-</div>
     <script src="./script/mainScript.js"></script>
     <script src="./data/countriesDatas.js"></script>
     <script src="./data/countriesMetadata.js"></script>
-    <script src="./script/dataAnalyser.js"></script>
-
-    <script src="./script/main.js"></script>
-    <script src="./script/jquery-1.12.2.min.js"></script>
-    <script src="./script/jquery.counterup.js"></script>
-    <script src="./script/jquery.waypoints.min.js"></script>
+    <script src="./script/countryMainStructure.js"></script>
 </body>
 
 </html>
