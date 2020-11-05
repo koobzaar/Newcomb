@@ -206,3 +206,9 @@ text-align: left;
 .explanation p {
     text-align: justify !important;
 }
+.right{
+    float: right;
+}
+#right{
+    text-align: right;
+}
