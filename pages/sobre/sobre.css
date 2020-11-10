@@ -186,7 +186,6 @@ li {
     height: 50%;
 }
 .explanation{
-    height: 800px;
     display: flex;
     align-items: center;
     flex-direction: column;

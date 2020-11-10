@@ -16,7 +16,7 @@
 
 <body>
     <div id="navbar">
-        <a ><img src="../../images/logologo.png" id="logoArvore"></a>
+        <a><img src="../../images/logologo.png" id="logoArvore"></a>
         <a id="logo">BENFORD'S LAW | <span id='analysis'>Análise estatística de dados</span></a>
         <a href="../../index.html">Visão Geral</a>
         <a href="../leiBenford/benford.html">Lei de Benford</a>
@@ -24,31 +24,60 @@
     </div>
     <div class="explanation">
         <div class="content">
-            <h6 id="primaryColor"><b> Sobre o trabalho...</b></h6>
             <h3><b> Fontes |</b> Principais informações</h3>
-            <p>(RASCUNHO)Todas as informações e elementos presentes nesse site foram retiradas de diferentes fontes. Algumas ideias, inspirações e informações utilizadas no projeto você pode ver clicando <a href="https://lamfo-unb.github.io/2020/04/20/COVID-China-ptBR/"> aqui!</a> Os dados sobre os casos de COVID-19 utilizados dos países foram encontrados na seguinte <a href="https://apify.com/covid-19"> fonte</a>, explicações sobre o conceito da lei de Benford também podem ser vistas nesse seguinte<a href="http://blog.kleinproject.org/?p=1446&lang=pt-br"> site</a>, além do documentário citado na página sobre a <a href="../leiBenford/benford.html">Lei de Benford.</a> Há também o site responsável por  fornecer a imagem das<a href="https://www.countryflags.io/"> bandeiras</a> dos países e a<a href="https://www.schemecolor.com"> cor</a> para os gráficos.
+            <h6 id="primaryColor"><b> Os dados utilizados</b></h6>
+            <p>Para realização da nossa pesquisa, contamos com fontes oficiais de dados de diversos países ao redor do
+                mundo, disponível na forma de uma API pública no Github que você pode verificar <a
+                    href="https://apify.com/covid-19"> clicando aqui. </a> Os dados foram acessados e baixados no dia 31
+                de outubro de 2020. Todas as análises foram feitas com estatísticas obtidas antes dessa data. <br> Para obtenção da cidade de Santos, usamos o<a href="https://www.santos.sp.gov.br/?q=portal/coronavirus"> Portal da Prefeitura para informações a respeito do Coronavírus</a>.
+                <h6 id="primaryColor"><b>Inspiração</b></h6>
+                Nossa pesquisa foi inspirada a partir do <b>artigo</b> publicado pelo Laboratório de Aprendizado de
+                Máquina em Finanças e Organizações da Faculdade de Economia, Administração, Contabilidade e Gestão de
+                Políticas Públicas da <b>Universidade de Brasília</b>, entitulada <i><a
+                        href="https://lamfo-unb.github.io/2020/04/20/COVID-China-ptBR/">Análise estatística dos dados chineses do
+                        COVID-19 usando Lei de Benford e clusterização,</a></i> feita pelos pesquisadores Peng Yaohao e
+                Mateus
+                Hiro Nagata, no dia 20 de abril de 2020.<br><br>
+                <h6 id="primaryColor"><b>Disclaimer: opiniões e instituições de ensino vinculadas</b></h6>
+                Todas as conclusões feitas não refletem em hipótese alguma o ponto de vista dos
+                pesquisadores, convidados e instituições de ensino superior vinculadas aos mesmos citados neste artigo,
+                e sim apenas a do nosso grupo. Também não expressam as opiniões da Fortec.
+                As logos das Universidades utilizadas na pesquisa foram usadas apenas como caráter ilustrativo de onde
+                retiramos nossas bases e de onde os pesquisadores que nos ajudaram no algoritmo dessa pesquisa se
+                vinculam, mas não necessariamente reflete qualquer tipo de parceria ou ligação da instituição de ensino
+                com o conteúdo desta.<br><br>
+                <h6 id="primaryColor"><b>Apresentação visual dos dados</b></h6>
+                Para a representação das bandeiras nos nossos gráficos, utilizamos da API CountryFlags, que pode ser
+                acessada <a href="https://www.countryflags.io/"> através deste link.</a> <br> Retiramos as cores dos
+                países através do site <a href="https://www.schemecolor.com"> SchemeColor</a> para a coloração dos
+                gráficos.
             </p>
-            <br></br>
-            <h6 id="primaryColor"><b> Participantes</b></h6>
-            <h3><b> Grupo |</b> Alunos </h3>
-            <p>Projeto feito pelos alunos do TIN2 para apresentação na EXPOTEC 2020, tema: <b>"Lei de Benford"</b><br>
-            </br>Integrantes do grupo: 
-            <ul style="list-style-type:disc">
-           <b><li>Eduardo Pan - nº 4</li>
-            <br>
-            </br>
-            <li> Josiel Santana - nº 22 </li>
-            <br>
-            </br>
-            <li>Rodrigo dos Santos - n° 38</li>
-            <br>
-            </br>
-            <li>Vinicio Assis - n° 40</li>
-            <br>
-            </br>
-            </ul>
+            <br><br><br>
+            <h6 id="primaryColor"><b> Os que participaram desta pesquisa</b></h6>
+            <h3><b> FORTEC |</b> Alunos </h3>
+            <p>Abaixo, os alunos que fizeram parte do projeto que há de ser apresentado na EXPOTEC 2020, sob o tema
+                <b>"Lei de Benford"</b><br>
+                <ul style="list-style-type:disc">
+                    <b>
+                        <li>Eduardo Pan - nº 4</li><br>
+                        <li> Josiel Santana - nº 22 </li><br>
+                        <li>Rodrigo dos Santos - n° 38</li><br>
+                        <li>Vinicio Assis - n° 40</li><br>
+                        </br>
+                    </b>
+                </ul>
             </p>
-            <br></br>
+            <br>
+            <h3><b> Universidades |</b> Pesquisadores </h3>
+                <ul style="list-style-type:disc">
+                    <li><b>Bruno Bezerra Trigueiro</b><br><i>bruno.trigueiro@outlook.com</i><br> Pesquisador Independente em Matemática Computacional<br>Graduando Ciências Matemáticas
+                        <br> Cidade Universitária <br><br><img src="https://logodownload.org/wp-content/uploads/2015/02/ufrj-logo-6-minerva.png" width="30%" alt=""></li><br>
+                        <p>
+                    </br>
+                </ul>
+            </p>
         </div>
+        <br></br>
+
     </div>
 </body>

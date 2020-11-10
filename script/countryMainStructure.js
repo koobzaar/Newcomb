@@ -36,6 +36,8 @@ class dadosPais {
         for (let index = 0; index < this.benfordData.length; index++)
             this.benfordData[index] = this.benfordData[index] / totalNumbers * 100;
         this._dadosForamGerados[0] = true;
+        if(this.nomePais=='Santos')
+        console.log(this.benfordData)
         this.tempoAnalisando = Math.abs(new Date() - inicioAnalise)
         return this.benfordData;
     }
