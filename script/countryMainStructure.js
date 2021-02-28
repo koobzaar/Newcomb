@@ -24,7 +24,7 @@ class dadosPais {
             deltaCovid = parseInt(this.dadosSARSCOV[i + 1][this.aliasMortes], 10) - lastCovidData; 
             // Transforma em decimal os dados de morte de determinado dia e subtrai pelo dia anterior para ter o Δ relativo 
             // daquele intervalo de tempo
-            if (deltaCovid != 0 && !isNaN(deltaCovid)) {
+            if (deltaCovid != 0 && !Number.isNaN(deltaCovid)) {
                 //Posteriormente valida se os dados são diferentes de zero. Considerando que na lei de Benford não é utilizado 0 para medição, 
                 //um dia que não tenha havido mortes não é útil para a relação de comparação de dados.
                 this.numMortes += deltaCovid;
