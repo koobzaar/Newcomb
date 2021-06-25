@@ -36,6 +36,4 @@ Quanto menor o número em questão, mais próximo efetivamente um país está da
 Bruno Trigueiro | bruno.trigueiro@outlook.com
 Matemático Computacional, responsável pela aplicação das equações e criações de índices.
 
-Rodrigo dos Santos | rodrigo.bak10@hotmail.com
-Responsável por aspectos do front-end e formação de gráficos através dos cálculos.
 
