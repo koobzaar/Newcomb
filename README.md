@@ -30,10 +30,3 @@ Quanto menor o número em questão, mais próximo efetivamente um país está da
 ![Resultado Parcial 2](https://image.prntscr.com/image/q8tOFPHgS3OAfkg7hszajg.png)
 ![Resultado Parcial 3](https://image.prntscr.com/image/a3ogqPEdTm_L41yCMRZ4Hw.png)
 ![Resultado Parcial 4](https://image.prntscr.com/image/PNTu7MEzRFm_ZssoxnpycA.png)
-
-
-## Contato
-Bruno Trigueiro | bruno.trigueiro@outlook.com
-Matemático Computacional, responsável pela aplicação das equações e criações de índices.
-
-
