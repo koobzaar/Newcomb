@@ -4,7 +4,7 @@ function analisar() {
   
   analisePrincipal._dePaises();
   let contadorConfig = {
-    "duracao": 4000
+    "duracao": 10000
   }
  
 var element = document.getElementById('descricaoGraficos');

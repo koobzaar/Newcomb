@@ -20,7 +20,7 @@ function gerarGrafico(idDiv, benfordData, countryColor, nomePais, coeficiente) {
     document.querySelector('.benford').insertAdjacentHTML(
         'afterbegin',
         `<div class='grafico' id="`+nomePais+`">
-        <img class='bandeiras' src="https://www.countryflags.io/` + idDiv + `/flat/32.png">&nbsp;` + nomePais + `` + definirCorCoeficiente(coeficiente) + `
+        <img class='bandeiras' crossorigin="anonymous" src="https://countryflagsapi.com/png/` + idDiv + `">&nbsp;` + nomePais + `` + definirCorCoeficiente(coeficiente) + `
         <canvas id="` + idDiv + `" width="350" height="300"></canvas>
         </div>`
     )

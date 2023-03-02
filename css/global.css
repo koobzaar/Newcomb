@@ -1,5 +1,4 @@
-@import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold);
-@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+@import url('https://fonts.cdnfonts.com/css/circular-std-book');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 @font-face {
@@ -25,6 +24,9 @@ html {
     scroll-behavior: smooth;
     background-color: var(--corFundoSite)#f4fafb;
 
+}
+.bandeiras{
+    width: 30px;
 }
 #logoArvore{
     margin-left: 30px;
