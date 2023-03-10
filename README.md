@@ -1,5 +1,5 @@
 
-# Benford Research
+# Newcomb - aka. Benford Research
 Initiative that is dedicated to statistical analysis of public data obtained from various Health Ministries, aiming to identify distortions in the mortality numbers of the population through the rigorous application of Benford's Law. The collection and processing of public data is carried out using data mining techniques, and the results obtained are subjected to statistical analysis for inferring relevant information related to the distortion of mortality indices.
 
 ## Benford's Law
